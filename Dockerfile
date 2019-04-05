@@ -12,3 +12,5 @@ RUN conda install --quiet --yes \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
+
+COPY main.py helpers.py main.ipynb fashion-mnist_train.csv fashion-mnist_test.csv /home/jovyan/work/
